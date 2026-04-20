@@ -3,8 +3,7 @@ import jax.numpy as jnp
 import equinox as eqx
 from jaxtyping import Float
 from typing import Optional, NamedTuple
-
-from mha import TransformerBlock, GELU, batch_vmap
+from MultiHeadAttention import TransformerBlock, GELU, batch_vmap
 
 
 class ModelOutput(NamedTuple):
@@ -28,6 +27,7 @@ class Model(eqx.Module):
         key_emb, key_blocks, key_linear, key_linear_out = jax.random.split(key, 4)
 
         self.embeddings = eqx.nn.Embedding(vocab_size, d_model, key = key_emb)
+        
         # Stack of Transformer Blocks
         self.transformer_block = [
             TransformerBlock(d_model, num_heads, key = k_block, return_attention_weights = return_attention_weights,
