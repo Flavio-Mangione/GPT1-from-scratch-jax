@@ -3,7 +3,7 @@ import jax.numpy as jnp
 import equinox as eqx
 from jaxtyping import Float
 from typing import Optional, NamedTuple
-from MultiHeadAttention import TransformerBlock, GELU, batch_vmap
+from layers import TransformerBlock, GELU, batch_vmap
 
 
 class ModelOutput(NamedTuple):
