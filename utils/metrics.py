@@ -24,7 +24,7 @@ def val_step(model, xb, yb, pad_id: int = 0):
     loss = cross_entropy_loss(out.logits, yb, pad_id)
     return loss
 
-
+# Compute validation loss over all validation batches
 def compute_val_loss(model, x, y, pad_id: int = 0, batch_size: int = 128) -> float:
     total_loss = 0.0
     n = len(x)
