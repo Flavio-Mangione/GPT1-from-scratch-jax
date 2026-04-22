@@ -4,8 +4,12 @@
     <bold> GPT-1 from Scratch using Jax </bold>
   </h1>
   <p>
+    <a href = "https://www.python.org/downloads/release/python-3110/">
     <img src="https://img.shields.io/badge/Python-3.11-blue.svg" alt="Python"/>
+    </a>
+    <a href = "https://www.uniroma1.it/en/pagina-strutturale/home">
     <img src="https://img.shields.io/badge/Sapienza-Università_di_Roma-822433" alt="Sapienza"/>
+    </a>
   </p>
   </p>
 </div>
