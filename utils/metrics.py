@@ -2,7 +2,6 @@ import jax
 import jax.numpy as jnp
 import equinox as eqx
 
-
 # Cross-entropy for autoregressive language modeling
 def cross_entropy_loss(logits, y, pad_id: int = 0):
     log_probs = jax.nn.log_softmax(logits, axis=-1)
@@ -15,7 +14,6 @@ def cross_entropy_loss(logits, y, pad_id: int = 0):
     # Define the loss function
     loss = -jnp.sum(target_log_probs) / jnp.maximum(jnp.sum(valid_mask), 1)
     return loss
-
 
 # Define validation steps
 @eqx.filter_jit
@@ -39,7 +37,6 @@ def compute_val_loss(model, x, y, pad_id: int = 0, batch_size: int = 128) -> flo
 
     return float(total_loss / n_batches)
 
-
 @eqx.filter_jit
 def _top_k_batch(model, xb, yb, k: int, pad_id: int = 0):
     out = model(xb, inference=True)
@@ -48,7 +45,6 @@ def _top_k_batch(model, xb, yb, k: int, pad_id: int = 0):
     mask = (yb != pad_id)
     correct = jnp.where(mask, correct, 0)
     return jnp.sum(correct), jnp.sum(mask)
-
 
 def top_k_accuracy(model, x, y, pad_id: int = 0, k: int = 5, batch_size: int = 128) -> float:
     total_correct, total_tokens = 0, 0

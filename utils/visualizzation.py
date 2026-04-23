@@ -2,6 +2,18 @@ import matplotlib.pyplot as plt
 import jax.numpy as jnp
 
 def plot_attention_bar(attention_weights, tokens, num_heads, num_layers):
+    """
+    Plots attention weights as bar plots for each head and layer in a GPT model.
+    Args:
+        attention_weights: List of attention weights each one with shape (batch_size, num_heads, q_len, k_len)
+        tokens: List of input tokens corresponding to the key sequence
+        num_heads: Number of attention heads
+        num_layers: Number of layers in the model
+
+    Returns:
+        A barplot showing attention weights for each head and layer.
+    """ 
+    
     fig, ax = plt.subplots(nrows=num_layers, ncols=num_heads, figsize=(4*num_heads, 3*num_layers))
 
     # Align tokens to key sequence length
