@@ -89,7 +89,7 @@ The KV cache is compressed using L2-norm-based pruning: entries with higher norm
 
 ```bash
 
-generate_text_compress(model, prompt, max_new_tokens = 50, temperature=0.50, penalty = 1.4, ratio = 0.70, cache_cap = 25)
+generate_text_compress(model, prompt, max_new_tokens = 50, temperature = 0.50, penalty = 1.4, ratio = 0.70, cache_cap = 25)
 
 ```
 
