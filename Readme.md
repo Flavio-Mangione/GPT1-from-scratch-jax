@@ -56,14 +56,14 @@ pip install jax equinox optax
 
 # Example of Model initialization with GPT-1 configuration
 
-model = Model(
-    d_model=768,
-    num_heads=12,
-    num_layers=12,
-    vocab_size=50000,
-    key=model_key,
-    dropout_rate=0.1,
-    return_attention_weights=True)
+model = GPT1(
+    d_model = 768,
+    num_heads = 12,
+    num_layers = 12,
+    vocab_size = 50257,
+    key = model_key,
+    dropout_rate = 0.1,
+    return_attention_weights = True)
 
 ```
 
