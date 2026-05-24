@@ -45,8 +45,10 @@ The pipeline for text generation using cache is defined as follows:
 
 ### Install dependencies 
 
+Install dependencies with:
+
 ```bash
-pip install jax equinox optax
+pip install -r requirements.txt
 ```
 
 ### Import and initialize model
