@@ -39,7 +39,7 @@ The pipeline for text generation using cache is defined as follows:
 
 - `utils.metrics`: Metrics used for training and evaluating the model.
 - `utils.visualizzation`: Utilities to visualize model behavior and attention patterns.
-- [`Demo Notebook.ipynb`](https://github.com/Flavio-Mangione/GPT1-from-scratch-jax/blob/master/Notebook/Demo%20Notebook.ipynb): example notebook used to test the model.
+- [`Demo Notebook.ipynb`](https://colab.research.google.com/drive/1UWHZom0osGupbS3w7EsBm5oCv2jBbAp_): example notebook used to test the model.
 
 ## How to use
 
