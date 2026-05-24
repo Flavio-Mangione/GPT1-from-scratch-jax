@@ -1,0 +1,8 @@
+jax
+jaxlib
+equinox
+jaxtyping
+datasets
+optax
+matplotlib
+contractions
