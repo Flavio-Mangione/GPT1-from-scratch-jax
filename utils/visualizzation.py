@@ -39,8 +39,8 @@ def plot_attention_bar(attention_weights, tokens, num_heads, num_layers):
             ax[layers_id, head].set_title(f"Layer {layers_id}, Head {head+1}")
             ax[layers_id, head].set_xticks(valid_x)
             ax[layers_id, head].set_xticklabels(tokens_for_plot, rotation=60, ha="right", fontsize=8)
-            ax[layers_id, head].set_xlabel("Token (key)")
-            ax[layers_id, head].set_ylabel("Attention weight")
+            ax[layers_id, head].set_xlabel("Tokens")
+            ax[layers_id, head].set_ylabel("Attention weights")
 
     plt.tight_layout()
     plt.show()
