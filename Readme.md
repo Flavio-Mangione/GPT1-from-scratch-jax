@@ -71,7 +71,7 @@ model = GPT1(
 
 ## Training 
 
-The model was evaluated during training using Cross-Entropy loss and Perplexity, defined as::
+The model was evaluated during training using Cross-Entropy loss and Perplexity, defined as:
 
 <div align="center">
 
